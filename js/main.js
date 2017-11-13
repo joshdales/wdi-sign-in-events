@@ -15,15 +15,17 @@ signIn.addEventListener('click', function() {
 var submit = document.querySelector('.submit');
 var user = document.querySelector('#user');
 var pass = document.querySelector('#pass');
-var input = document.querySelector('input');
+var inputs = document.querySelectorAll('input');
 
 submit.addEventListener('click', function() {
   user.classList.add('error');
   pass.classList.add('error');
 })
 
-input.addEventListener('mouseover', function() {
-  input.classList.remove('error');
+inputs.forEach(function(input) {
+  input.addEventListener('mouseover', function() {
+    input.classList.remove('error');
+  });
 })
 
 var close = document.querySelector('.close');
